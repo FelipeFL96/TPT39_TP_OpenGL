@@ -1,0 +1,58 @@
+Paralelismo
+ - Paralelismo em nivel de operacao
+	operacoes que podem ser realizadas independentemente
+	ax² + bx + c, cada parcela pode ser calculada independentemente, antes
+ - Paralelismo em nivel de dados
+	opoeracoes sobre vetores sao bons exemplos
+ - Paralelismo em nivel de instrucao
+	pipelines para as etapas de execucao de uma instrucao na CPU
+
+
+Cursos de Arquitetura de Computadores costumam seguir a ordem:
+	- Processador
+	- MMU
+	- Cache
+	- Memoria (é mesmo?)
+	
+	Aqui, sera feito ao contrario porque para lidar com sistemas em chips, geralmente os problemas de desempenho se encontram mais na memoria.
+
+controle de memoria reorganiza o trafego de acesso a memoria para aumentar a eficiencia dos processos (mais de ) 
+
+em ssistemas a muiltiprocessadores, pode acontecer de um valor estar atualizado na memoria, nao estar no cache, Isso é geralmente devido a presenca de multiplos pcddadores (nucleos); um deles faz o writebqck e os outros nao o acompanham
+
+MMU serve para evitar fragmentacao na memoria principal
+Ela é um dos principais mecanismos para a existencia da memoria virtual
+Tabela de paginas mapeia enderecos virtuais a enderecos fisicos	
+
+
+gitpitch.com/amusant/tpt39/tmpdev?grs=github&t=beige&p=ocl_syntax#1
+
+Documentação para OpenCL: khornos.org
+khronos.org/registry/OpenCL/sdk/2.0/docs/man 
+
+
+-----------------------------------------------------------
+
+Abrir o depurador
+-(desktop)source init.sh
+-(placa)source init_odroid.sh
+-(desktop)mgd
+-(placa)mgddamemon
+-(placa:..../hello_world)make debug
+
+--------------------------------------------------------
+Threads help to use the execution unit more efficiently
+
+clEnqueue
+
+
+Copying times for 50E6 vectors
+CPU: 523.769.760 ns
+GPU: 281.526.173 ns
+
+Copying times for 50E6 vectors
+CPU: 519.517.508 ns
+GPU: 274.290.176 ns
+
+https://github.com/pjreddie/darknet/blob/master/src/im2col.c
+
